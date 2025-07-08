@@ -13,7 +13,7 @@ def plot_activation_function(func_name, func, x_range=(-10, 10), num_points=1000
     y = func(x)
     
     plt.figure(figsize=(8, 5))
-    plt.plot(x.numpy(), y.numpy())
+    plt.plot(x.numpy(), y.detach().numpy())
     plt.title(f"{func_name.capitalize()} Activation Function")
     plt.grid(True)
     plt.xlabel("Input")
